@@ -11,7 +11,7 @@ class KMP:
     def build_table(self):
         for i in range(1, self.n):
             j = self.kmp[i - 1]
-            while j > 0 and self.s[i] != self.pattern[j]:
+            while j > 0 and self.pattern[i] != self.pattern[j]:
                 j = self.kmp[j - 1]
 
             if self.pattern[i] == self.pattern[j]:
